@@ -1,0 +1,9 @@
+https://api.themoviedb.org/3/movie/now_playing?api_key=e5995452ba27594098545f1df3e4ed05
+
+api_key=e5995452ba27594098545f1df3e4ed05
+
+https://image.tmdb.org/t/p/w500/
+
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=e5995452ba27594098545f1df3e4ed05
+
+https://api.themoviedb.org/3/search/movie?query=SEARCH_DATA&api_key=e5995452ba27594098545f1df3e4ed05
