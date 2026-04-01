@@ -101,7 +101,7 @@ src/
 
 ## 📸 Screenshots
 
-![Home View ](<Screenshot 2026-04-01 122835.png>)
+![Home View ](./public/screenshot/Screenshot%202026-04-01%20122835.png)
 
 ---
 
