@@ -1,16 +1,114 @@
-# React + Vite
+# 🎬 Biscope TV
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie discovery app built with React, powered by the TMDB API. Browse now-playing movies, search for any title, and dive into detailed movie info including cast, trailer, budget, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🎥 Browse **now playing** movies from TMDB
+- 🔍 **Search** any movie by title
+- 📄 **Detailed movie page** with:
+  - Runtime, genres, status, tagline
+  - Rating, votes, budget, revenue
+  - Director & top cast
+  - Production countries, languages, companies
+  - YouTube trailer link
+- 🖼️ **Fallback image** for movies without a poster
+- 📱 Fully **responsive** layout
+- ⚡ Fast and clean UI with equal-height movie cards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology                                               | Usage            |
+| -------------------------------------------------------- | ---------------- |
+| [React](https://reactjs.org/)                            | UI Framework     |
+| [Vite](https://vitejs.dev/)                              | Build Tool       |
+| [Tailwind CSS](https://tailwindcss.com/)                 | Styling          |
+| [Flowbite React](https://flowbite-react.com/)            | UI Components    |
+| [Redux](https://redux.js.org/)                           | State Management |
+| [React Router](https://reactrouter.com/)                 | Routing          |
+| [TMDB API](https://www.themoviedb.org/documentation/api) | Movie Data       |
+| [Font Awesome](https://fontawesome.com/)                 | Icons            |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- A free [TMDB API key](https://www.themoviedb.org/settings/api)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/LonYarHao/Movie_Project-BiscopeTV-.git
+
+# Go into the project folder
+cd Movie_Project-BiscopeTV-
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```
+
+### Environment Setup
+
+Create a file called `api/index.js` (or wherever your api config is) and add your TMDB API key:
+
+```js
+import axios from "axios";
+
+export const api_key = "YOUR_TMDB_API_KEY";
+
+export const api = axios.create({
+  baseURL: "https://api.themoviedb.org/3",
+});
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── api/
+│   └── index.js              # Axios instance + API key
+├── components/
+│   ├── Header.jsx            # Navbar + search
+│   ├── Home.jsx              # Home page
+│   ├── Movies.jsx            # Movie grid
+│   ├── MovieCard.jsx         # Individual movie card
+│   ├── Details.jsx           # Movie detail page
+│   ├── FooterBottom.jsx      # Footer
+│   └── ErrorPage.jsx         # 404 page
+├── redux/
+│   ├── action-type.js
+│   ├── action/movies/        # Redux actions
+│   ├── reducer/movie/        # Movie reducer
+│   └── store/                # Redux store
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 📸 Screenshots
+
+![Home View ](<Screenshot 2026-04-01 122835.png>)
+
+---
+
+## 📝 License
+
+This project is for personal/educational use.
+
+---
+
+Made with ❤️ by [LonYarHao](https://github.com/LonYarHao)
